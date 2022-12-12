@@ -65,5 +65,6 @@ async def on_voice_state_update(member, before, after):
                         for x in client.voice_clients:
                             if x.channel.guild.id == GUILD_ID:
                                 x.cleanup()
+            
 
 client.run(os.getenv("TOKEN"))
