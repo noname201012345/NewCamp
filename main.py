@@ -37,7 +37,7 @@ async def on_ready():
 async def on_call():
     if client.get_guild(GUILD_ID).get_member(client.user.id).voice is None:
         check = True
-        while True:
+        while check:
             try:
                 vc = client.get_guild(GUILD_ID).get_channel(CHANNEL_ID)
                 await vc.connect()
